@@ -1,0 +1,35 @@
+{
+  "name" : "aropixel/menu-bundle",
+  "description" : "Gestion de menus pour Admin Aropixel",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Joël Gomez Caballe",
+    "email" : "joel.gomez@aropixel.com"
+  }],
+  "keywords" : [
+    "aropixel menu bundle"
+  ],
+  "license" : [
+    "MIT"
+  ],
+  "autoload" : {
+    "psr-4" : {
+      "Aropixel\\MenuBundle\\" : "src/"
+    }
+  },
+  "require" : {
+    "aropixel/admin-bundle": "dev-feature/phpstan|dev-release/finalversion|dev-main"
+  },
+  "scripts": {
+    "symfony-scripts": [
+      "rm -rf var/cache/*",
+      "php bin/console assets:install public --relative"
+    ],
+    "post-install-cmd": [
+      "@symfony-scripts"
+    ],
+    "post-update-cmd": [
+      "@symfony-scripts"
+    ]
+  }
+}
