@@ -14,7 +14,7 @@
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('bundles/aropixeladmin/modules/jquery.mjs.nestedSortable.js') }}"></script>
     <script type="module" src="{{ asset('bundles/aropixeladmin/js/module/modal-dyn/modal-dyn.js') }}"></script>
-    {% if not aropixel_admin_entry_available %}
+    {% if not aropixel_asset_mapper_enabled %}
         <script src="{{ asset('bundles/aropixelmenu/js/menu_controller.js') }}" type="module"></script>
     {% endif %}
 {% endblock %}
